@@ -1,0 +1,20 @@
+project/
+│
+├─ main.py                  # Inicializa FastAPI, importa routers
+├─ models.py                # SQLAlchemy + Pydantic models
+├─ database.py              # Criação do engine, session, base
+├─ schemas.py               # Pydantic schemas (UserCreate, UserLogin, BookModel)
+├─ auth.py                  # JWT, hash de senha, dependências de autenticação
+├─ crud/                    # Funções de CRUD isoladas
+│   ├─ user.py              # Funções de usuário (create, login, get_by_id)
+│   └─ book.py              # Funções de livros (get, search, top_rated)
+├─ routers/                 # Rotas separadas por recurso
+│   ├─ users.py             # /api/v1/register, /api/v1/login, /api/v1/auth/refresh
+│   ├─ books.py             # /api/v1/books, /search, /top-rated, /price-range
+│   ├─ stats.py             # /api/v1/stats/overview, /stats/categories
+│   └─ scraping.py          # /api/v1/scraping/trigger
+├─ utils/                   # Funções utilitárias
+│   ├─ scraping_books.py    # Função scrape_books() (reaproveitada pelo background task)
+│   └─ helpers.py           # rating_to_int, CSV export, etc.
+├─ .env
+└─ .gitignore
