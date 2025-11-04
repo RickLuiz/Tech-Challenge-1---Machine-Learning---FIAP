@@ -107,9 +107,9 @@ Health Check
 
 Repositório GitHub: https://github.com/RickLuiz/Tech-Challenge-1---Machine-Learning---FIAP/tree/main
 
-Deploy da API: (https://tech-challenge-1-machine-learning-fiap-bpzy2cl3l.vercel.app/)
+Deploy da API: https://tech-challenge-1-machine-learning-f.vercel.app/docs
 
-Vídeo demonstrativo: [INSIRA_AQUI_O_LINK_DO_VIDEO]
+Vídeo demonstrativo: https://youtu.be/yhd9wLAAJhg
 
 
 Credênciais de login em produção:
