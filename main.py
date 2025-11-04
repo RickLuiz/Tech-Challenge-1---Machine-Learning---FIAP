@@ -7,7 +7,26 @@ from routers.health import router as health_router
 
 
 
-app = FastAPI(title="Tech Challenge 1 - Machine Learning - FIAP", version="1.0.0")
+app = FastAPI(title="Tech Challenge 1 - Machine Learning - FIAP", version="1.0.0", description="""
+              ## 🔐 Como fazer login
+
+                    1. Vá até a rota `/api_login`.
+                    2. Envie uma requisição **POST** com o corpo JSON:
+                    ```json
+                    {
+                    "username": "henrique",
+                    "password": "teste123"
+                    }
+
+                    3. Você receberá um token JWT como resposta.
+
+                    4. Copie esse token e clique no botão "Authorize" no topo da documentação Swagger.
+
+                    5. Cole o token no formato: Bearer 
+
+                    6. Agora você pode acessar as rotas protegidas.
+              
+              """)
 
 # Registrar routers
 app.include_router(users_router)
