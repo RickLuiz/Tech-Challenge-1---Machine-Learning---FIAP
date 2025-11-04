@@ -1,7 +1,9 @@
 from sqlalchemy.orm import Session
 from models import User
 from auth import hash_password, verify_password
-from database import get_session
+from datetime import datetime, timedelta
+from auth import JWT_SECRET_KEY, JWT_ALGORITHM, JWT_EXPIRE_MINUTES
+import jwt
 
 def create_user(db: Session, username: str, password: str):
     hashed = hash_password(password)
@@ -16,3 +18,9 @@ def authenticate_user(db: Session, username: str, password: str):
     if not user or not verify_password(password, user.password):
         return None
     return user
+
+def create_access_token(user_id: str):
+    expire = datetime.utcnow() + timedelta(minutes=JWT_EXPIRE_MINUTES)
+    payload = {"sub": user_id, "exp": expire}
+    token = jwt.encode(payload, JWT_SECRET_KEY, algorithm=JWT_ALGORITHM)
+    return token
