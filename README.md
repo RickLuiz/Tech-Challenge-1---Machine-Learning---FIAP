@@ -107,7 +107,7 @@ Health Check
 
 Repositório GitHub: https://github.com/RickLuiz/Tech-Challenge-1---Machine-Learning---FIAP/tree/main
 
-Deploy da API: [INSIRA_AQUI_O_LINK_DO_DEPLOY]
+Deploy da API: (https://tech-challenge-1-machine-learning-fiap-bpzy2cl3l.vercel.app/)
 
 Vídeo demonstrativo: [INSIRA_AQUI_O_LINK_DO_VIDEO]
 
@@ -118,30 +118,10 @@ Na Vercel tem um usuário teste que pode ser acessado com as credênciais:
 username:"henrique"
 password:'teste123
 
-🔹 Arquitetura do Projeto
+🔹 Arquitetura do Projeto:
 
-O projeto segue a seguinte arquitetura:
+(https://github.com/RickLuiz/Tech-Challenge-1---Machine-Learning---FIAP/blob/main/Tech%20Challenge%201.drawio.png?raw=true)
 
-FastAPI App
-│
-├─ Routers
-│   ├─ /books
-│   ├─ /users
-│   └─ /stats
-│
-├─ Database
-│   ├─ models.py (SQLAlchemy ORM)
-│   └─ CRUD operations
-│
-├─ Auth
-│   ├─ JWT token
-│   └─ Password hashing (Passlib + bcrypt)
-│
-├─ Scraping
-│   └─ BeautifulSoup + Requests
-│
-└─ CSV export
-    └─ Pandas
 
 🔹 Observações
 
