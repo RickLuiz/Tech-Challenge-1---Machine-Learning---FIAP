@@ -47,26 +47,6 @@ def categories(session: Session = Depends(get_session)):
     return crud_books.list_categories(session)
 
 
-@router.get("/api/v1/health")
-def health_check():
-    session = Session()
-    try:
-        # Tenta contar os livros para testar a conexão
-        total_livros = session.query(books_table).count()
-        return {
-            "status": "ok",
-            "database_connected": True,
-            "total_books": total_livros
-        }
-    except Exception as e:
-        return {
-            "status": "error",
-            "database_connected": False,
-            "error": str(e)
-        }
-    finally:
-        session.close()
-
 @router.get("/{book_id}")
 def book_by_id(book_id: int, session: Session = Depends(get_session)):
     book = crud_books.get_book_by_id(session, book_id)

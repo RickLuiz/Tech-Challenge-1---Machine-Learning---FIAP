@@ -6,11 +6,11 @@ from database import engine, get_session
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-from auth import get_current_user  # função de JWT modularizada
+from auth import get_current_user  
 
 router = APIRouter(prefix="/api/v1/scraping", tags=["Scraping"])
 
-# Configuração do SQLite
+
 Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
 
