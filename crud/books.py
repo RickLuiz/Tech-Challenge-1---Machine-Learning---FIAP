@@ -30,8 +30,6 @@ def list_categories(session: Session):
 def get_books_by_price_range(session: Session, min_price: float, max_price: float):
     return session.query(Book).filter(Book.preco >= min_price, Book.preco <= max_price).all()
 
-
-
 def get_total_books(session: Session) -> int:
     """
     Retorna a contagem total de livros no banco.
